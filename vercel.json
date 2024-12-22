@@ -4,7 +4,7 @@
       { "src": "ut-weather-server.js", "use": "@vercel/node" }
     ],
     "routes": [
-      { "src": "/weather", "dest": "ut-weather-server.js" }
+      { "src": "/api/weather", "dest": "ut-weather-server.js" }
     ]
   }
   
