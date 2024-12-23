@@ -14,17 +14,13 @@ app.use(cors());
 // Create Redis client
 const redisClient = redis.createClient();
 
-// Handle Redis connection errors
 redisClient.on('error', (err) => {
   console.error('Redis error:', err);
 });
 
-// Connect to Redis
 redisClient.connect();
 
-// Your Visual Crossing API Key (replace with your actual key)
-const apiKey = process.env.WEATHER_API_KEY;  // Replace with your actual API key
-
+const apiKey = process.env.WEATHER_API_KEY;
 // Define the weather API endpoint
 app.get('/api/weather', async (req, res) => {
   const { city, country } = req.query;
